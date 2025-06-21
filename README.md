@@ -1,3 +1,4 @@
 # maarifmaniyar.github.io
  
-![website-under-construction-page-web-260nw-2014660484](https://github.com/user-attachments/assets/5083143b-a971-4fbe-bc2a-611faf04692e)
+![Black and Yellow Illustration Under Construction Banner](https://github.com/user-attachments/assets/ef67961e-88f8-4d20-8745-f7044f3248a9)
+
