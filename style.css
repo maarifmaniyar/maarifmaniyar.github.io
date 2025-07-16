@@ -20,19 +20,30 @@ body.dark-mode {
 }
 
 header {
-  background-image: url('images/cover.jpg');
+  background-image: url('"C:\Users\maniy\OneDrive\Documents\Pictures\Saved Pictures\sebastian-pantosin-adQ47SDzEzU-unsplash.jpg"');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
   text-align: center;
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  backdrop-filter: brightness(0.5);
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+
+header .hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  color: white;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .cover-banner {
