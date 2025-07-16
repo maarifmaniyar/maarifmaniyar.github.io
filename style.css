@@ -1,117 +1,221 @@
-/* Basic Reset */
-* {
+/* ====== Global Styles ====== */
+body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  padding: 0 1rem;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 :root {
   --bg: #ffffff;
-  --text: #111111;
-  --accent: #007acc;
+  --text: #1a1a1a;
 }
 
-body.dark {
-  --bg: #121212;
+body.dark-mode {
+  --bg: #1e1e1e;
   --text: #f0f0f0;
-  --accent: #1e90ff;
 }
 
-header, footer {
-  background-color: var(--accent);
+header {
+  background-image: url('images/cover.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   text-align: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: brightness(0.5);
+}
+
+.cover-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cover-photo {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  object-fit: cover;
 }
 
 nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
   gap: 1rem;
-  margin-top: 0.5rem;
 }
 
-nav a, #theme-toggle {
-  color: white;
+nav a {
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
-#theme-toggle:hover {
-  background-color: #005f99;
-}
-
-main {
-  max-width: 960px;
-  margin: auto;
-  padding: 2rem 0;
+nav a:hover {
+  text-decoration: none;
 }
 
 .section {
-  margin-bottom: 3rem;
-  animation: fadeIn 0.8s ease-in;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+h2 {
+  color: #0078d7;
+  padding-bottom: 0.3rem;
 }
 
 .project-card {
-  background-color: rgba(0, 122, 204, 0.05);
+  border: 2px solid #0078d7;
+  border-radius: 8px;
   padding: 1rem;
-  border: 1px solid var(--accent);
   margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0078d7;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 form input, form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.7rem;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 form button {
-  background-color: var(--accent);
+  padding: 0.7rem;
+  background-color: #0078d7;
   color: white;
-  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #005f99;
+  background-color: #005fa3;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.testimonial {
+  background-color: #f0f8ff;
+  border-left: 4px solid #0078d7;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
 }
 
-@media (max-width: 600px) {
+.resume-download {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resume-download a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #0078d7;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.resume-download a:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  .project-card {
-    font-size: 0.9rem;
+  .cover-banner .profile-pic {
+    width: 100px;
+    height: 100px;
   }
-} 
+}
+
+/* Theme Toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  margin-left: 1rem;
+}
+
+#theme-toggle:hover {
+  color: #ffdf00;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
