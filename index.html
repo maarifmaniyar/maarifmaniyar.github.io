@@ -1,8 +1,107 @@
-<div class="cover-banner">
-  <img src="images/cover.jpg" alt="Cover Image" class="cover-photo" />
-  <img src="images/profile.jpg" alt="Profile Image" class="profile-pic" />
-</div>
-<section id="resume" class="section resume-download">
-  <h2>Resume</h2>
-  <a href="resume.pdf" download>Download My Resume (PDF)</a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Maarif Maniyar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header with Cover and Profile Photo -->
+  <header>
+    <div class="cover-banner">
+      <img src="images/cover.jpg" alt="Cover Image" class="cover-photo" />
+      <img src="images/profile.jpg" alt="Profile Image" class="profile-pic" />
+    </div>
+    <h1>Mohammed Maarif Maniyar</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">☀️/🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I am an enthusiastic AIML engineer passionate about building AI-powered applications, cloud solutions, and multilingual voice experiences.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>RED – Resilient Environment Defense-testing</h3>
+        <p>Simulates real-world cyberattacks to stress-test defenses.</p>
+      </div>
+      <div class="project-card">
+        <h3>DeFi-AI-Driven-Risk-Engine</h3>
+        <p>Risk engine using DeFi + XR dashboard for asset visualization.</p>
+      </div>
+      <div class="project-card">
+        <h3>DvaniX</h3>
+        <p>Multilingual voice assistant for Hindi, Telugu, Kannada, Tamil, English.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, JavaScript, C++</li>
+        <li>Machine Learning, Deep Learning</li>
+        <li>Flask, Git, HTML/CSS</li>
+        <li>Google Cloud, AWS, Hugging Face</li>
+      </ul>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section resume-download">
+      <h2>Resume</h2>
+      <a href="resume.pdf" download>Download My Resume (PDF)</a>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <h2>Testimonials</h2>
+      <div class="testimonial">
+        "Mohammed's AI project helped us simulate real cybersecurity threats with accuracy and reliability."
+      </div>
+      <div class="testimonial">
+        "DvaniX is one of the most fluid multilingual assistants I’ve interacted with!" – Peer
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mohammed Maarif Maniyar</p>
+    <div class="social-icons">
+      <a href="https://github.com/maarifmaniyar" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/maarifmaniyar" target="_blank">LinkedIn</a>
+      <a href="mailto:maarif@example.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
