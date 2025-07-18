@@ -23,6 +23,17 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
   color: #ffffff; /* Ensure text remains readable */
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust for darkness */
+  z-index: -1;
+}
+
 
 
 :root {
