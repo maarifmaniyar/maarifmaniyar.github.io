@@ -33,6 +33,13 @@ body::before {
   background-color: rgba(0, 0, 0, 0.6); /* Adjust for darkness */
   z-index: -1;
 }
+section {
+  background-color: rgba(0, 0, 0, 0.4); /* Adds subtle background to content boxes */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 
 
 
