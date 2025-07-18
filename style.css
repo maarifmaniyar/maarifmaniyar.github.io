@@ -13,6 +13,17 @@ body {
   line-height: 1.6;
   padding: 0 1rem;
 }
+body {
+  background-image: url('./images/cover-bg.png'); /* Adjust path if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay; /* For low transparency effect */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  color: #ffffff; /* Ensure text remains readable */
+}
+
 
 :root {
   --bg: #ffffff;
